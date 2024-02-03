@@ -28,7 +28,7 @@ function convertToLat(x, y) {
   let margeErreurLat;
   if (quadrant === 'topLeft') {
     console.log('topLeft');
-    margeErreurLat = 1.46;
+    margeErreurLat = 0.98;
   }else if(quadrant === 'bottomLeft'){
     console.log('bottomLeft');
     margeErreurLat = -0.5;
