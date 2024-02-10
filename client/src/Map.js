@@ -102,4 +102,55 @@ function Map(props) {
 }
 
 export default Map;
+// import React, { useRef } from 'react';
+// import { ReactComponent as FranceMapSVG } from './france-final.svg';
 
+// function Map({ convertToLat, convertToLon, fetchCities }) {
+//   const svgRef = useRef(null);
+
+//   const handleMouseOver = (city) => {
+//     // Affiche les détails de la ville, par exemple dans un élément avec l'ID 'city-details'
+//     const detailsDiv = document.getElementById('city-details');
+//     detailsDiv.innerHTML = `Nom de la ville : ${city.name}, Population : ${city.population}`;
+//     // Ajoutez d'autres informations de ville comme nécessaire
+//   };
+
+//   const updateCityList = (cities) => {
+//     // Met à jour la liste des villes, par exemple dans un élément avec l'ID 'city-list'
+//     const listDiv = document.getElementById('city-list');
+//     listDiv.innerHTML = ''; // Efface la liste existante
+//     cities.forEach(city => {
+//       const cityElement = document.createElement('div');
+//       cityElement.innerText = city.name;
+//       cityElement.addEventListener('mouseover', () => handleMouseOver(city));
+//       listDiv.appendChild(cityElement);
+//     });
+//   };
+
+//   const handleClick = async (event) => {
+//     const svg = svgRef.current;
+//     const rect = svg.getBoundingClientRect();
+//     const point = svg.createSVGPoint();
+//     point.x = event.clientX - rect.left;
+//     point.y = event.clientY - rect.top;
+//     const cursorPoint = point.matrixTransform(svg.getScreenCTM().inverse());
+//     const lat = convertToLat(cursorPoint.x, cursorPoint.y);
+//     const lon = convertToLon(cursorPoint.x, cursorPoint.y);
+//     const cities = await fetchCities(lat, lon);
+//     updateCityList(cities);
+//   };
+
+//   return (
+//     <div>
+//       <FranceMapSVG ref={svgRef} width="600" height="400" onClick={handleClick} style={{border: "1px solid black"}} />
+//       <div id="city-details">
+//         {/* Détails de la ville s'afficheront ici */}
+//       </div>
+//       <div id="city-list">
+//         {/* Liste des villes s'affichera ici */}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Map;
