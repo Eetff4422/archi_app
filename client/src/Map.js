@@ -16,7 +16,7 @@ async function fetchCities(lat, lon) {
   console.log(lat);
   console.log(lon);
   try {
-    const response = await fetch(`/cities/${lat}/${lon}`);
+    const response = await fetch(`/api/cities/${lat}/${lon}`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
