@@ -1,0 +1,4 @@
+com\application\fullstack\FullstackApplication.class
+com\application\fullstack\Ville.class
+com\application\fullstack\VilleService.class
+com\application\fullstack\VilleController.class
